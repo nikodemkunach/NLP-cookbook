@@ -1,0 +1,15 @@
+{"time":"2025-01-28T17:54:44.888978189Z","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"/teamspace/studios/this_studio/wandb/run-20250128_175444-oflgmrar/logs/debug-core.log"}
+{"time":"2025-01-28T17:54:44.995183928Z","level":"INFO","msg":"created new stream","id":"oflgmrar"}
+{"time":"2025-01-28T17:54:44.99524793Z","level":"INFO","msg":"stream: started","id":"oflgmrar"}
+{"time":"2025-01-28T17:54:44.995417043Z","level":"INFO","msg":"writer: Do: started","stream_id":"oflgmrar"}
+{"time":"2025-01-28T17:54:44.995524896Z","level":"INFO","msg":"sender: started","stream_id":"oflgmrar"}
+{"time":"2025-01-28T17:54:44.995591607Z","level":"INFO","msg":"handler: started","stream_id":"oflgmrar"}
+{"time":"2025-01-28T17:54:45.48604322Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-28T18:00:18.108578787Z","level":"INFO","msg":"stream: closing","id":"oflgmrar"}
+{"time":"2025-01-28T18:00:18.108665328Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-28T18:00:18.109591538Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-28T18:00:18.445539175Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-28T18:00:18.536125706Z","level":"INFO","msg":"handler: closed","stream_id":"oflgmrar"}
+{"time":"2025-01-28T18:00:18.536154417Z","level":"INFO","msg":"writer: Close: closed","stream_id":"oflgmrar"}
+{"time":"2025-01-28T18:00:18.536175537Z","level":"INFO","msg":"sender: closed","stream_id":"oflgmrar"}
+{"time":"2025-01-28T18:00:18.536390032Z","level":"INFO","msg":"stream: closed","id":"oflgmrar"}
