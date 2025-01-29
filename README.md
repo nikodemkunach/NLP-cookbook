@@ -69,7 +69,7 @@ Wyniki:
 ---
 
 ## Wykres treningu
-![Training Score](meal_model_plot.png)
+![Training Score](meal_model_plots.png)
 
 ## Wykres BLEU Score
 
