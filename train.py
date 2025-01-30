@@ -5,10 +5,12 @@ from unsloth import FastLanguageModel, is_bfloat16_supported
 from data_preprocessing import load_and_preprocess_data
 from model_utils import load_model_and_tokenizer, get_peft_model
 
-def train():
-    model_name = "unsloth/gemma-2-9b-it-bnb-4bit"
-    model, tokenizer = load_model_and_tokenizer(model_name)
+model_name = "unsloth/gemma-2-9b-it-bnb-4bit"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+EOS_TOKEN = tokenizer.eos_token
 
+def train():
+    model, tokenizer = load_model_and_tokenizer(model_name)
     model = get_peft_model(model)
 
     formatted_dataset = load_and_preprocess_data()
