@@ -1,5 +1,10 @@
 import pandas as pd
 from datasets import Dataset
+from transformers import AutoTokenizer
+
+model_name = "unsloth/gemma-2-9b-it-bnb-4bit"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+EOS_TOKEN = tokenizer.eos_token
 
 def load_and_preprocess_data(file_path='data/train_products.csv'):
     df = pd.read_csv(file_path)
@@ -22,7 +27,7 @@ def load_and_preprocess_data(file_path='data/train_products.csv'):
 
         texts = []
         for instruction, input, output in zip(instructions, inputs, outputs):
-            text = f"### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n{output}"
+            text = f"### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:\n{output}" + EOS_TOKEN
             texts.append(text)
 
         return {"text": texts}
