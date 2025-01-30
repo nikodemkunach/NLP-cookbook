@@ -1,12 +1,17 @@
 from unsloth import FastLanguageModel
 import torch
+from transformers import AutoTokenizer
 from model_utils import load_model_and_tokenizer
 
+model_name = "fine-tuned-diet"
+EOS_TOKEN = AutoTokenizer.from_pretrained(model_name).eos_token
+
 def generate_diet_plan(prompt, model, tokenizer):
+    prompt = prompt + EOS_TOKEN
     inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
     outputs = model.generate(
         inputs.input_ids,
-        max_length=150,
+        max_length=300,
         num_return_sequences=1,
         no_repeat_ngram_size=2,
         top_p=0.9,
@@ -19,7 +24,6 @@ def generate_diet_plan(prompt, model, tokenizer):
     return diet_plan
 
 def main():
-    model_name = "fine-tuned-diet"
     model, tokenizer = load_model_and_tokenizer(model_name)
     model = FastLanguageModel.for_inference(model)
 
